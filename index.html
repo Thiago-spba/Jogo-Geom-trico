@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -113,3 +114,120 @@
   <script src="sketch.js"></script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo Geométrico Interativo</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Estilos do layout */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #282c34;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      overflow-y: auto;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    #pontuacao {
+      font-size: 1.2em;
+      color: #ffcc00;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    #playButton, #pauseButton {
+      padding: 10px 20px;
+      font-size: 1em;
+      border: 2px solid #ffcc00;
+      background-color: #444;
+      color: #ffcc00;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #game-over {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2em;
+      color: #ffcc00;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
+    }
+
+    #congratulations {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5em;
+      color: #00ffcc;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.5);
+    }
+
+    canvas {
+      border: 2px solid #ffcc00;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.5);
+      width: 100%;
+      height: auto;
+      max-width: 600px;
+      max-height: 80vh;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Jogo Geométrico Interativo</h1>
+    <div id="pontuacao">Pontuação: 0</div>
+    <div class="button-container">
+      <button id="playButton" onclick="iniciarJogo()">Play</button>
+      <button id="pauseButton" onclick="pausarJogo()">Pause</button>
+    </div>
+    <div id="game-over">Game Over! Pontuação: <span id="pontuacaoFinal"></span></div>
+    <div id="congratulations">Parabéns! 🎉</div>
+  </main>
+
+  <!-- Importa a biblioteca p5.js e o arquivo de código JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
+>>>>>>> ea6209eff167bc35e6ffb8649b915e522b57a3fe
